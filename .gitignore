@@ -1,3 +1,5 @@
 cmake-build-debug/
+cmake-build-release
 days
 .idea
+*.pch

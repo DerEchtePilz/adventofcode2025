@@ -2,11 +2,13 @@
 
 #include "main.h"
 #include "src/day1.h"
+#include "src/day2.h"
 
 int main() {
     printDay(1, day1::runDay(false), day1::runDay(true));
+    printDay(2, day2::runDay(false), day2::runDay(true));
 }
 
-void printDay(int day, int part1, int part2) {
-    std::print("Day {} solutions:\n  Part 1: {}\n  Part 2: {}", day, part1, part2);
+void printDay(unsigned long long day, unsigned long long part1, unsigned long long part2) {
+    std::println("Day {} solutions:\n  Part 1: {}\n  Part 2: {}", day, part1, part2);
 }

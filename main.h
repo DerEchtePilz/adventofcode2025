@@ -1,3 +1,3 @@
 #pragma once
 
-void printDay(int day, int part1, int part2);
+void printDay(unsigned long long day, unsigned long long part1, unsigned long long part2);

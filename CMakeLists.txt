@@ -4,7 +4,7 @@ project(adventofcode2025)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(adventofcode2025 main.cpp
-        src/day1.cpp
         src/util.h
         src/day1.h
-        main.h)
+        main.h
+        src/day2.h)
