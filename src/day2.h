@@ -39,8 +39,8 @@ namespace day2 {
                     if (digits % 2 != 0) {
                         continue;
                     }
-                    unsigned long long first = i / static_cast<int>(std::pow(10, digits / 2));
-                    unsigned long long second = i % static_cast<int>(std::pow(10, digits / 2));
+                    const unsigned long long first = i / static_cast<int>(std::pow(10, digits / 2));
+                    const unsigned long long second = i % static_cast<int>(std::pow(10, digits / 2));
                     if (first != second) {
                         continue;
                     }
