@@ -8,4 +8,5 @@ add_executable(adventofcode2025 main.cpp
         src/day1.h
         main.h
         src/day2.h
-        src/day3.h)
+        src/day3.h
+        src/day4.h)

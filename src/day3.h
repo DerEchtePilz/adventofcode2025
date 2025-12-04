@@ -3,7 +3,7 @@
 #include "util.h"
 
 namespace day3 {
-    inline unsigned long long getBiggestNumber(const std::string& bank, int start, int end) {
+    inline unsigned long long getBiggestNumber(const std::string& bank, const int start, const int end) {
         unsigned long long biggest = 0;
 
         int biggestIndex = start;
@@ -21,13 +21,13 @@ namespace day3 {
         if (end == 0) {
             return biggest;
         }
-        unsigned long long intermediateHigh = biggest * static_cast<unsigned long long>(std::pow(10, end));
-        unsigned long long intermediateLow = getBiggestNumber(bank, biggestIndex, end - 1);
+        const unsigned long long intermediateHigh = biggest * static_cast<unsigned long long>(std::pow(10, end));
+        const unsigned long long intermediateLow = getBiggestNumber(bank, biggestIndex, end - 1);
         return intermediateHigh + intermediateLow;
     }
 
     inline unsigned long long runDay(bool partTwo) {
-        std::vector<std::string> input = readFile("day3.txt");
+        const std::vector<std::string> input = readFile("day3.txt");
         unsigned long long result = 0;
         for (const std::string& bank : input) {
             unsigned long long biggest = 0;
