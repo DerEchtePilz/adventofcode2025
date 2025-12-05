@@ -1,6 +1,9 @@
 #include <print>
 
 #include "main.h"
+
+#include <chrono>
+
 #include "src/day1.h"
 #include "src/day2.h"
 #include "src/day3.h"
@@ -8,13 +11,23 @@
 #include "src/day5.h"
 
 int main() {
-    printDay(1, day1::runDay(false), day1::runDay(true));
-    printDay(2, day2::runDay(false), day2::runDay(true));
-    printDay(3, day3::runDay(false), day3::runDay(true));
-    printDay(4, day4::runDay(false), day4::runDay(true));
-    printDay(5, day5::runDay(false), day5::runDay(true));
+    printDay(1, day1::runDay, day1::runDay);
+    printDay(2, day2::runDay, day2::runDay);
+    printDay(3, day3::runDay, day3::runDay);
+    printDay(4, day4::runDay, day4::runDay);
+    printDay(5, day5::runDay, day5::runDay);
 }
 
-void printDay(unsigned long long day, unsigned long long part1, unsigned long long part2) {
-    std::println("Day {} solutions:\n  Part 1: {}\n  Part 2: {}", day, part1, part2);
+void printDay(unsigned long long day, dayFunction one, dayFunction two) {
+    auto start1 = std::chrono::system_clock::now();
+    unsigned long long part1 = one(false);
+    auto end1 = std::chrono::system_clock::now();
+    auto start2 = std::chrono::system_clock::now();
+    unsigned long long part2 = two(true);
+    auto end2 = std::chrono::system_clock::now();
+
+    double ms1 = std::chrono::duration<double, std::milli>(end1 - start1).count();
+    double ms2 = std::chrono::duration<double, std::milli>(end2 - start2).count();
+
+    std::println("Day {} solutions:\n  Part 1: {} ({:.2f} ms)\n  Part 2: {} ({:.2f} ms)", day, part1, ms1, part2, ms2);
 }

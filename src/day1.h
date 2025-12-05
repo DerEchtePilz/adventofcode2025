@@ -4,8 +4,8 @@
 #include "util.h"
 
 namespace day1 {
-    inline int runDay(bool partTwo) {
-        int pointsAtZero = 0;
+    unsigned long long runDay(bool partTwo) {
+        unsigned long long pointsAtZero = 0;
         int start = 50;
         for (std::string& opWithNumber : readFile("day1.txt")) {
             char op = opWithNumber[0];
