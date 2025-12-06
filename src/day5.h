@@ -36,8 +36,7 @@ namespace day5 {
         }
     };
 
-    inline unsigned long long runDay(bool partTwo) {
-        std::vector<std::string> input = readFile("day5.txt");
+    inline unsigned long long runDay(bool partTwo, std::vector<std::string>& input) {
         std::vector<Range> ranges;
         std::vector<unsigned long long> ids;
         bool rangesEnd = false;

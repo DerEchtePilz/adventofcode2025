@@ -1,7 +1,5 @@
 #pragma once
 
-#include "util.h"
-
 namespace day3 {
     inline unsigned long long getBiggestNumber(const std::string& bank, const int start, const int end) {
         unsigned long long biggest = 0;
@@ -26,8 +24,7 @@ namespace day3 {
         return intermediateHigh + intermediateLow;
     }
 
-    inline unsigned long long runDay(bool partTwo) {
-        const std::vector<std::string> input = readFile("day3.txt");
+    inline unsigned long long runDay(bool partTwo, std::vector<std::string>& input) {
         unsigned long long result = 0;
         for (const std::string& bank : input) {
             unsigned long long biggest = 0;

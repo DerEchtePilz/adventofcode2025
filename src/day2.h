@@ -58,9 +58,8 @@ namespace day2 {
         }
     };
 
-    inline unsigned long long runDay(bool partTwo) {
-        std::string input = readFile("day2.txt")[0];
-        std::vector<std::string> ranges = split(input, ',');
+    inline unsigned long long runDay(bool partTwo, std::vector<std::string>& input) {
+        std::vector<std::string> ranges = split(input[0], ',');
         unsigned long long invalidIdsSum = 0;
         for (const auto& rawRange : ranges) {
             std::vector<std::string> rangeParts = split(rawRange, '-');

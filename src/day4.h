@@ -1,7 +1,5 @@
 #pragma once
 
-#include "util.h"
-
 namespace day4 {
 
     inline bool isAccessible(const std::vector<std::vector<char>>& grid, const int x, const int y) {
@@ -33,8 +31,7 @@ namespace day4 {
         return adjacent < 4;
     }
 
-    inline unsigned long long runDay(bool partTwo) {
-        std::vector<std::string> input = readFile("day4.txt");
+    inline unsigned long long runDay(bool partTwo, std::vector<std::string>& input) {
         std::vector<std::vector<char>> grid;
         for (std::string& row : input) {
             std::vector<char> gridRow;

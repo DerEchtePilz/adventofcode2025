@@ -4,10 +4,10 @@
 #include "util.h"
 
 namespace day1 {
-    unsigned long long runDay(bool partTwo) {
+    unsigned long long runDay(bool partTwo, std::vector<std::string>& input) {
         unsigned long long pointsAtZero = 0;
         int start = 50;
-        for (std::string& opWithNumber : readFile("day1.txt")) {
+        for (std::string& opWithNumber : input) {
             char op = opWithNumber[0];
             int number = std::stoi(opWithNumber.substr(1, opWithNumber.size() - 1));
             if (op == 'L') {
