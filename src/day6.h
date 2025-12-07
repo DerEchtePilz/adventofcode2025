@@ -88,8 +88,8 @@ namespace day6 {
     inline unsigned long long runDay(bool partTwo, std::vector<std::string>& input) {
         std::vector<std::vector<unsigned long long>> numbers;
         std::vector<char> operators;
-        std::ranges::copy_if(input[4], std::back_inserter(operators), [](char c) {
-            return !std::isspace(static_cast<unsigned char>(c));
+        std::ranges::copy_if(input[4], std::back_inserter(operators), [](unsigned char c) {
+            return !std::isspace(c);
         });
 
         buildNumbers(input, numbers, partTwo);

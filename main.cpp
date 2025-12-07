@@ -10,6 +10,7 @@
 #include "src/day4.h"
 #include "src/day5.h"
 #include "src/day6.h"
+#include "src/day7.h"
 
 int main() {
     printDay(1, day1::runDay, day1::runDay);
@@ -18,6 +19,7 @@ int main() {
     printDay(4, day4::runDay, day4::runDay);
     printDay(5, day5::runDay, day5::runDay);
     printDay(6, day6::runDay, day6::runDay);
+    printDay(7, day7::runDay, day7::runDay);
 }
 
 void printDay(unsigned long long day, dayFunction one, dayFunction two) {
