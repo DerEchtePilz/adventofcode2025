@@ -4,6 +4,20 @@
 #include <string>
 #include <vector>
 
+struct Vector3 {
+    int x = -1, y = -1, z = -1;
+
+    bool operator==(const Vector3& rhs) const {
+        return x == rhs.x && y == rhs.y && z == rhs.z;
+    }
+
+    bool operator<(const Vector3& rhs) const {
+        if (x != rhs.x) return x < rhs.x;
+        if (y != rhs.y) return y < rhs.y;
+        return z < rhs.z;
+    }
+};
+
 inline std::vector<std::string> readFile(const std::string& fileName) {
     std::string file;
     std::vector<std::string> lines;

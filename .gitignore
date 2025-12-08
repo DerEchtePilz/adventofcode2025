@@ -3,3 +3,4 @@ cmake-build-release
 days
 .idea
 *.pch
+.clang-format
